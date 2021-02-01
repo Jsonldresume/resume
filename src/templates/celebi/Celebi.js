@@ -10,6 +10,10 @@ import * as _  from 'lodash';
 
 import data from '../../resume.json';
 
+fetch('src/resume.json', {mode: 'no-cors'})
+        .then(response => response.json())
+        .then(tt => console.log(tt))
+        .catch(error => console.error(error));
 const styles = {
   header: {
     position: 'absolute',
