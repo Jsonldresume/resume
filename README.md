@@ -4,7 +4,7 @@
 
 [![GitHub](https://img.shields.io/github/license/jsonldresume/lab-web)](https://github.com/jsonldresume/lab-web/blob/main/LICENSE)
 
-### [Go to App](https://jsonldresume.com/)
+### [See the sample](https://jsonldresume.github.io/resume/)
 
 ### What is this app all about?
 
