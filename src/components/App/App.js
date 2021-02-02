@@ -33,11 +33,12 @@ const App = ({theme='Celebi'}) => {
       method: "GET"
     }).then(response => response.json()).then(result => {
       //dispatch({ type: 'import_data', payload: result });
-      if(!storedState){
-        storedState = {};
+      let newData = {};
+      if(storedState){
+        newData = storedState;
       }
-      storedState.data = result;
-      dispatch({ type: 'import_data', payload: storedState });
+      newData.data = result;
+      dispatch({ type: 'import_data', payload: newData });
     });
   }, [dispatch, setPageRef, setPanZoomRef, i18n, settings.language]);
 
