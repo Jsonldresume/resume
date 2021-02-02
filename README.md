@@ -23,7 +23,7 @@ You can share your resume with anyone on the internet without requiring any serv
 ### Pre-requisite
 
 - Jsonld resume
-First you need to create your jsonld resume and export it using the lab-web repository. Once you exported, follow hte stps below.
+First you need to create your jsonld resume and export it using the lab-web repository. Once you exported, follow the stps below.
 
 
 ### Building your resume
