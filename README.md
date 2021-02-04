@@ -28,7 +28,7 @@ First you need to create your jsonld resume and export it using the lab-web repo
 
 ### Building your resume
 
-Want to have your own website and show your resume on it? You are very much free to do so. Follow 5 easy steps:
+Want to have your own website and show your resume on it? You are very much free to do so. Follow 7 easy steps:
 
 1. First, fork this repository by clicking the fork button on top right.
 
@@ -36,13 +36,20 @@ Want to have your own website and show your resume on it? You are very much free
 2. Unzipe the exported files from lab-web.
 
 
-3.uplod each of the two files indivbidually into your fork by clicking "Add File" button -> "Upload files", and selecting both files from the unzipped location, and "Commit"
+3. Upload each of the two files individually into your fork by clicking "Add File" button -> "Upload files", and selecting both files from the unzipped location, and "Commit"
+
+Steps 4 and 5 are not mandatory but strongly suggested to enable Google and other search engin, better understand your resume.
+
+4. In your download folder, right click on script.js file and open it in a text editor. Then copy all of the content(Ctrl+A and then Ctrl+V).
 
 
-4. On your own fork, go to "Settings" tab and scroll down to "GitHub Pages"
+5. In your github fork, click on index.html, click on edit icon from top right, and paste the content you copied in previous step, in the specified area.
 
 
-5. Set branch to main (or any other branch you might have), and path to /(root) and click Save.
+6. On your own fork, go to "Settings" tab and scroll down to "GitHub Pages"
+
+
+7. Set branch to main (or any other branch you might have), and path to /(root) and click Save.
 
 
 And that's it! Githhub automatically creates your website and shows you th URL to share with anyone you want. It might take a few minuts before you can use the URL. 🎉
