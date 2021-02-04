@@ -11,14 +11,14 @@ import PageController from '../../shared/PageController';
 import PrintDialog from '../../shared/PrintDialog';
 import PanZoomAnimation from '../../shared/PanZoomAnimation';
   
-const App = ({theme='Celebi'}) => {
+const App = () => {
   const pageRef = useRef(null);
   const panZoomRef = useRef(null);
   const { i18n } = useTranslation();
 
   const context = useContext(AppContext);
   const { state, dispatch } = context;
-  const { settings } = state;
+  const { theme, settings } = state;
 
   const pageContext = useContext(PageContext);
   const { setPageRef, setPanZoomRef } = pageContext;
@@ -34,10 +34,11 @@ const App = ({theme='Celebi'}) => {
     }).then(response => response.json()).then(result => {
       //dispatch({ type: 'import_data', payload: result });
       let newData = {};
-      if(storedState){
+      if(result){
+        newData = result;
+      }else if(storedState){
         newData = storedState;
       }
-      newData.data = result;
       dispatch({ type: 'import_data', payload: newData });
     });
   }, [dispatch, setPageRef, setPanZoomRef, i18n, settings.language]);
@@ -58,7 +59,7 @@ const App = ({theme='Celebi'}) => {
             style={{ outline: 'none' }}
           >
             <div id="page" ref={pageRef} className="shadow-2xl break-words">
-              {templates.find(x => theme.toLowerCase() === x.key).component()}
+              {templates.find(x => theme.layout.toLowerCase() === x.key).component()}
             </div>
           </PanZoom>
 
@@ -66,7 +67,7 @@ const App = ({theme='Celebi'}) => {
         </div>
 
         <div id="printPage" className="break-words">
-          {templates.find(x => theme.toLowerCase() === x.key).component()}
+          {templates.find(x => theme.layout.toLowerCase() === x.key).component()}
         </div>
 
         <PanZoomAnimation />

@@ -25,7 +25,7 @@ ReactDOM.render(
   <React.StrictMode>
     <AppProvider>
       <PageProvider>
-        <App theme='Celebi' />
+        <App />
       </PageProvider>
     </AppProvider>
   </React.StrictMode>,
